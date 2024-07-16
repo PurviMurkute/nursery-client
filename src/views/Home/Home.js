@@ -3,6 +3,7 @@ import './Home.css';
 import PlantCard from '../../components/PlantCard/PlantCard';
 import axios from 'axios';
 import toast, {Toaster} from 'react-hot-toast';
+import { Link } from 'react-router-dom';
 
 function Home() {
 
@@ -24,7 +25,7 @@ function Home() {
   return (
     <div>
       
-      <h1 className='fw-bold m-3'>Plants</h1>
+      <h1 className='fw-bold m-3 text-center'>Plants</h1>
 
       {
         plants.map((plant, i)=>{
@@ -44,10 +45,15 @@ function Home() {
             price={price} 
             image={image} 
             description={description}
+            loadPlants={loadPlants}
             />)
         })
       }
       <Toaster />
+
+      <Link to="/add">
+      <img src='add.png' alt='add' className='addbtn ' />
+      </Link>
     </div>
   )
 }
