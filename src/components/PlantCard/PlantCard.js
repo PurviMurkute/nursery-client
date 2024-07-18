@@ -14,9 +14,9 @@ function PlantCard({_id, name, category, image, price, description, loadPlants})
     loadPlants()
   }
   return (
-    <div className='plant-card border border-dark border-2 px-5 py-3 rounded-3 m-5 position-relative'>
-      <h1 className='plant=title fs-3 fw-bolder'>{name}</h1>
-      <p className='plant-price'>Price: {price}</p>
+    <div className='plant-card border border-light bg-success border-2 px-5 py-3 shadow rounded-3 m-5 position-relative'>
+      <h1 className='plant=title fs-3 fw-bolder text-white'>{name}</h1>
+      <p className='plant-price text-white'>Price: {price}</p>
       <img src={image} alt='plant-img' className='card-img position-absolute top-0 end-0 m-3'/>
 
       <div>

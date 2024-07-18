@@ -41,10 +41,11 @@ function AddPlant() {
     }
 
     return (
-        <div>
-            <h1>Add Plant</h1>
+        <div className='bg-body-secondary'>
+            <h1 className='text-center'>Add Plant</h1>
 
-            <form>
+            <div className='d-flex justify-content-center align-items-center'>
+            <form className='border border-dark p-5 m-3 rounded shadow bg-success'>
 
                 <input
                     type='text'
@@ -88,11 +89,14 @@ function AddPlant() {
                     className='plant-input d-block m-3 p-2'
                 />
 
-                <button type='button' onClick={addPlant}>Add Plant</button>
+                <button type='button' onClick={addPlant} className='bg-dark text-white py-1 px-3 rounded shadow d-block my-3 mx-auto text-decoration-none fs-5'>Add Plant</button>
             </form>
+            </div>
 
             <br />
-            <Link to="/">Show All Plans</Link>
+            <Link to="/">
+            <button className='bg-dark text-white py-1 px-3 rounded shadow d-block my-3 mx-auto text-decoration-none fs-5'>Click here to see all plant</button>
+            </Link>
         </div>
     )
 }

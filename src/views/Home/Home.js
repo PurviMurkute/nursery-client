@@ -39,6 +39,7 @@ function Home() {
           } = plant
 
           return (<PlantCard 
+            key={i}
             _id={_id} 
             name={name} 
             category={category} 
@@ -52,7 +53,7 @@ function Home() {
       <Toaster />
 
       <Link to="/add">
-      <img src='add.png' alt='add' className='addbtn ' />
+      <button className='add-btn bg-dark text-white py-1 px-4 rounded shadow d-block my-3 mx-auto text-decoration-none fs-4'>Add Plant</button>
       </Link>
     </div>
   )
